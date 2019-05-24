@@ -1,0 +1,13 @@
+INDEX VERSION 1.131
+E:\Git_hub\05. Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4046051288.index
+\Spring02_inputScore\src\main\java
+E:\Git_hub\05. Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2206136849.index
+\Spring01\src\main\java
+E:\Git_hub\05. Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2762206761.index
+\Sping1\src\main\java
+E:\Git_hub\05. Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1655657099.index
+\Spring03_InputScore\src\main\java
+E:\Git_hub\05. Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\144855629.index
+\Spring01_HelloWorld\src\main\java
+E:\Git_hub\05. Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2328569288.index
+\Spring03_InputScore2\src\main\java
