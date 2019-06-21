@@ -21,5 +21,6 @@
 		<span><label>기말고사점수</label><input type="number" name="final_score" /></span>
 		<input type="submit" value="데이터 전송" />
 	</form>
+
 </body>
 </html>

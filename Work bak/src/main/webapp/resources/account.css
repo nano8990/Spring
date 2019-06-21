@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+
+
+
+
+.a{
+  width: 150px;
+  height: 40px;
+	
+}
+.btn{
+  width: 70px;
+  height: 40px;
+  background: #393b3f;
+  color: #fff;
+  border: none;
+  margin-left: 10px;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  font-weight: bold;
+  cursor: pointer;
+
+	
+}
+form label{
+      display: inline-block;
+      width: 4%;
+      padding: 8px 0px 0px 10px;
+      border-radius: 5px 0px;
+}
+
+
+.center {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+  }

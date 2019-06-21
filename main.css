@@ -1,0 +1,15 @@
+div {
+  border: 1px solid #333;
+}
+.head {
+  background: #FF0000;
+  padding: 5px 10px;
+  color: #FFF;
+}
+.div1 {
+  height: 20px;
+  border-radius: 20px;
+}
+.text div {
+  background: #00FFFF;
+}

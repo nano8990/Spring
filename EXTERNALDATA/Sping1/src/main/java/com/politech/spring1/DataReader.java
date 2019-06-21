@@ -54,8 +54,7 @@ public class DataReader {
 		if (this.connection == null) {
 			throw new Exception("DB is not open");
 		}
-		String query = "CREATE TABLE " + this.dbTableName
-				+ "(idx INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, middle_score INT, final_score INT);";
+		String query = "CREATE TABLE " + this.dbTableName + "(idx INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, middle_score INTEGER, final_score INTEGER);";
 		Statement statement = this.connection.createStatement();
 		int result = statement.executeUpdate(query);
 		statement.close();
@@ -63,39 +62,39 @@ public class DataReader {
 	}
 
 	public int insertData(String name, int middleScore, int finalScore) throws SQLException {
-		String query = "INSERT INTO " + this.dbTableName + "(name, middle_score, final_score) VALUES('" + name + "',"
-				+ middleScore + "," + finalScore + ");";
+		String query = "INSERT INTO " + this.dbTableName + "(name, middle_score, final_score) VALUES('" + name + "'," + middleScore + "," + finalScore + ");";
 		Statement statement = this.connection.createStatement();
 		int result = statement.executeUpdate(query);
 		statement.close();
 		return result;
 	}
 
-	public StringBuffer selectData() throws SQLException {
+	public String selectData() throws SQLException {
+		boolean result = false;
 		String query = "SELECT * FROM " + this.dbTableName + " WHERE ?;";
 		PreparedStatement preparedStatement = this.connection.prepareStatement(query);
 		preparedStatement.setInt(1, 1);
 		ResultSet resultSet = preparedStatement.executeQuery();
-		StringBuffer result = new StringBuffer();
+		String listString = "";
 		while (resultSet.next()) {
-			result.append("<tr>");
-			result.append("<td>");
-			result.append(resultSet.getString("idx"));
-			result.append("</td>");
-			result.append("<td>");
-			result.append(resultSet.getString("name"));
-			result.append("</td>");
-			result.append("<td>");
-			result.append(resultSet.getString("middle_score"));
-			result.append("</td>");
-			result.append("<td>");
-			result.append(resultSet.getString("final_score"));
-			result.append("</td>");
-			result.append("</tr>");
+			listString = listString + "<tr>";
+			listString = listString + "<td>";
+			listString = listString + resultSet.getString("idx");
+			listString = listString + "</td>";
+			listString = listString + "<td>";
+			listString = listString + resultSet.getString("name");
+			listString = listString + "</td>";
+			listString = listString + "<td>";
+			listString = listString + resultSet.getString("middle_score");
+			listString = listString + "</td>";
+			listString = listString + "<td>";
+			listString = listString + resultSet.getString("final_score");
+			listString = listString + "</td>";
+			listString = listString + "</tr>";
 		}
 		resultSet.close();
 		preparedStatement.close();
-		return result;
+		return listString;
 	}
 
 }

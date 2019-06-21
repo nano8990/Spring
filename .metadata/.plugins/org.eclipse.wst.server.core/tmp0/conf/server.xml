@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="E:\Git_hub\05. Spring\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="E:\Git_hub\05. Spring\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Sping1" path="/spring1" reloadable="true" source="org.eclipse.jst.jee.server:Sping1"/></Host>
+      <Context docBase="E:\Git_hub\05. Spring\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="E:\Git_hub\05. Spring\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Spring05_Login" path="/login" reloadable="true" source="org.eclipse.jst.jee.server:Spring05_Login"/><Context docBase="E:\Git_hub\05. Spring\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Spring04_Signin" path="/signin" reloadable="true" source="org.eclipse.jst.jee.server:Spring04_Signin"/><Context docBase="E:\Git_hub\05. Spring\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Work" path="/com" reloadable="true" source="org.eclipse.jst.jee.server:Work"/><Context docBase="E:\Git_hub\05. Spring\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Game" path="/game" reloadable="true" source="org.eclipse.jst.jee.server:Game"/></Host>
     </Engine>
   </Service>
 </Server>

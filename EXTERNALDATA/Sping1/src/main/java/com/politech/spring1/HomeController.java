@@ -22,20 +22,23 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
+		return "input";
+	}
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	public String listData(Locale locale, Model model) {
 		DataReader dataReader = new DataReader("c:\\tomcat\\students.sqlite", "students");
 		dataReader.open();
 		try {
-			dataReader.selectData();
+			model.addAttribute("list_results", dataReader.selectData());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		dataReader.close();
-		return "input";
+		return "list";
 	}
-
 	@RequestMapping(value = "/create_table", method = RequestMethod.GET)
 	public String createTable(Locale locale, Model model) {
 		DataReader dataReader = new DataReader("c:\\tomcat\\students.sqlite", "students");
@@ -43,7 +46,6 @@ public class HomeController {
 		try {
 			dataReader.createTable();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		dataReader.close();
@@ -54,41 +56,15 @@ public class HomeController {
 	public String inputData(@RequestParam("name") String name, @RequestParam("middle_score") String middleScore,
 			@RequestParam("final_score") String finalScore) {
 		DataReader dataReader = new DataReader("c:\\tomcat\\students.sqlite", "students");
-		if (middleScore.equals("")) {
-			middleScore = "0";
-		}
-		if (finalScore.equals("")) {
-			finalScore = "0";
-		}
 		dataReader.open();
 		try {
-			int intMiddle = Integer.parseInt(middleScore);
-			int intFinal = Integer.parseInt(finalScore);
-			dataReader.insertData(name, intMiddle, intFinal);
+			dataReader.insertData(name, Integer.parseInt(middleScore), Integer.parseInt(finalScore));
 		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return "input";
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return "input";
 		}
 		dataReader.close();
 		return "done";
-	}
-	
-	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public String list(Locale locale, Model model) {
-		DataReader dataReader = new DataReader("c:\\tomcat\\students.sqlite", "students");
-		dataReader.open();
-		try {
-			model.addAttribute("list_result", dataReader.selectData());
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		dataReader.close();
-		return "list";
 	}
 }

@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="E:\Git_hub\05. Spring\Game"/>
+		<item value="E:\Git_hub\05. Spring\Spring04_Signin"/>
+		<item value="E:\Git_hub\05. Spring\Spring05_Login"/>
+		<item value="E:\Git_hub\05. Spring"/>
+		<item value="E:\Git_hub\05. Spring\Spring02_inputScore2"/>
 		<item value="E:\Git_hub\05. Spring\Spring02_inputScore"/>
 		<item value="E:\Git_hub\05. Spring\Sping1"/>
 	</list>
 	<list key="installedFeatures">
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
+		<item value="de.jcup.egradle.eclipse.feature.core:2.5.0"/>
+		<item value="de.jcup.egradle.eclipse.feature.editor:2.5.0"/>
 		<item value="org.aspectj:1.8.13.201710301818"/>
 		<item value="org.eclipse.ajdt:2.2.4.201710301818"/>
+		<item value="org.eclipse.buildship:3.1.0.v20190501-0821"/>
 		<item value="org.eclipse.cft.server.core.feature:1.2.3.v201709130027"/>
 		<item value="org.eclipse.cft.server.ui.feature:1.0.10.v201709130027"/>
 		<item value="org.eclipse.draw2d:3.10.100.201606061308"/>

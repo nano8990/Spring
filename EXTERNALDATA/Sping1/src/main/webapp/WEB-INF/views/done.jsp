@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p>입력되었습니다.</p>
-	<form action="home" method="get">
-		<input type="submit" value="뒤로가기" />
-	</form>
+<p>입력되었습니다.</p>
 </body>
 </html>

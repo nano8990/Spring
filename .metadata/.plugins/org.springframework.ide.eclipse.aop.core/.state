@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aop-reference-model/>
+<aop-reference-model>
+<aop-project name="Work"/>
+<aop-project name="Spring05_Login"/>
+<aop-project name="Game"/>
+<aop-project name="Spring04_Signin"/>
+</aop-reference-model>
